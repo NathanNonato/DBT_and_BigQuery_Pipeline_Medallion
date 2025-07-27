@@ -4,10 +4,10 @@ dbt_core:
     dev:
       type: bigquery
       method: service-account
-      project: dbtandbigquery-467100
-      dataset: dbt_core
-      keyfile: ../dbtandbigquery-467100-c15317f2cdce.json
+      project: project_id
+      dataset: dataset
+      keyfile: service_account_credential
       threads: 1
       timeout_seconds: 300
-      location: us-central1
+      location: location
       priority: interactive 
