@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: mart_review_metrics
+    description: "Aggregated review metrics by recipe - Ready for BI"
+    columns:
+      - name: recipe_id
+        description: "Recipe ID"
+        data_tests:
+          - unique
+          - not_null
+      - name: total_reviews
+        description: "Total recipe reviews"
+      - name: unique_reviewers
+        description: "Number of unique reviewers"
+      - name: avg_rating
+        description: "Average recipe rating"
+      - name: popularity_category
+        description: "Popularity category based on volume"
+      - name: quality_category
+        description: "Quality category based on rating"
+        
+  - name: mart_author_insights
+    description: "Behavioral analysis of review authors"
+    columns:
+      - name: author_id
+        description: "Author ID"
+        data_tests:
+          - unique
+          - not_null
+      - name: author_name
+        description: "Author name"
+      - name: total_reviews_written
+        description: "Total reviews written by author"
+      - name: avg_rating_given
+        description: "Average rating given by author"
+      - name: activity_level
+        description: "Author activity level"
+      - name: rating_behavior
+        description: "Rating behavioral pattern" 

@@ -1,0 +1,13 @@
+dbt_core:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: dbtandbigquery-467100
+      dataset: dbt_core
+      keyfile: ../dbtandbigquery-467100-c15317f2cdce.json
+      threads: 1
+      timeout_seconds: 300
+      location: us-central1
+      priority: interactive 

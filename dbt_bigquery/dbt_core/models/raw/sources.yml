@@ -1,0 +1,37 @@
+version: 2
+
+# 🥉 RAW LAYER (Bronze) - Raw Data
+# Here we define the data sources that already exist in BigQuery
+sources:
+  - name: raw_data
+    description: "Raw food review data"
+    database: dbtandbigquery-467100
+    schema: raw
+    
+    tables:
+      - name: food_reviews
+        description: "Recipe reviews table existing in BigQuery"
+        columns:
+          - name: ReviewId
+            description: "Unique review ID"
+            data_tests:
+              - unique
+              - not_null
+          - name: RecipeId
+            description: "ID of the reviewed recipe"
+            data_tests:
+              - not_null
+          - name: AuthorId
+            description: "Review author ID"
+          - name: AuthorName
+            description: "Review author name"
+          - name: Rating
+            description: "Given rating (1-5)"
+            data_tests:
+              - not_null
+          - name: Review
+            description: "Review text"
+          - name: DateSubmitted
+            description: "Review submission date"
+          - name: DateModified
+            description: "Review modification date" 

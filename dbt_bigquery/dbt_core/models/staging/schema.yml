@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_food_reviews
+    description: "Clean and standardized review data from staging layer"
+    columns:
+      - name: review_id
+        description: "Unique review ID"
+        data_tests:
+          - unique
+          - not_null
+      - name: recipe_id
+        description: "ID of the reviewed recipe"
+        data_tests:
+          - not_null
+      - name: author_id
+        description: "Review author ID"
+      - name: author_name
+        description: "Clean and standardized author name"
+      - name: rating
+        description: "Validated rating (1-5, nulls for invalid values)"
+      - name: review_text
+        description: "Clean review text"
+      - name: submitted_at
+        description: "Standardized submission timestamp"
+      - name: modified_at
+        description: "Standardized modification timestamp"
+      - name: review_length
+        description: "Length of review text"
+      - name: has_review_text
+        description: "Flag indicating if review has valid text"
+      - name: loaded_at
+        description: "Timestamp when data was processed" 
