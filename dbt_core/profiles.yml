@@ -4,10 +4,10 @@ dbt_core:
     dev:
       type: bigquery
       method: service-account
-      project: project_id
-      dataset: dataset
-      keyfile: service_account_credential
+      project: dbtandbigquery-467100
+      dataset: dbt_core
+      keyfile:  /home/nathan_nonato/DBT_and_BigQuery_Pipeline_Medallion/dbtandbigquery-467100-c15317f2cdce.json
       threads: 1
       timeout_seconds: 300
-      location: location
+      location: us-central1
       priority: interactive 

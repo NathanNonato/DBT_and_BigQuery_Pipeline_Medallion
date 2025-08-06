@@ -128,19 +128,6 @@ dbt_bigquery/
 └── 📚 README.md                   # This file
 ```
 
-## 🔒 Security & Best Practices
-
-### Credentials Management
-- Service account keys excluded from Git
-- Environment variables for sensitive data
-- Separate profiles for different environments
-
-### Code Standards
-- SQL formatting with SQLFluff
-- Consistent naming conventions
-- Comprehensive documentation requirements
-- Automated testing on commit
-
 ## 🚦 CI/CD Pipeline
 
 ```bash
@@ -199,4 +186,3 @@ dbt debug
 - [BigQuery Documentation](https://cloud.google.com/bigquery/docs)
 - [Medallion Architecture](https://www.databricks.com/glossary/medallion-architecture)
 - [dbt Best Practices](https://docs.getdbt.com/guides/best-practices)
-- [SQLFluff Documentation](https://docs.sqlfluff.com/)
